@@ -5,7 +5,7 @@
 Example dataset for documenting the icc9() function
 }
 \description{
-Sample dataset using scrambled and deidentified metabolomics data from the American Cancer Society's Cancer Prevention Study II
+Sample dataset using scrambled and deidentified metabolomics data from the American Cancer Society's Cancer Prevention Study II.
 }
 \usage{data("qc")}
 \format{

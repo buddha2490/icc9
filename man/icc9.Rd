@@ -21,7 +21,9 @@ Vector of fixed effects one or more variable names (OPTIONAL)
 Data frame containing variables used in analysis (REQUIRED)
 }
   \item{method}{
-By default, the lmer() function calculates estimates based on restricted maximum likelihood (REML).  The original SAS ICC9 macro defaults to a maximum likelihood (ML) method, and so that is the default for this R function.  Users can indicate "ML" or "REML".
+  Users can indicate "ML" for maximum likelihood method or "REML" for restricted maximum likelihood.
+
+By default, the lmer() function calculates estimates based on restricted maximum likelihood (REML).  The original SAS ICC9 macro defaults to a maximum likelihood (ML) method, and so that is the default for this R function.
 }
 }
 \details{
