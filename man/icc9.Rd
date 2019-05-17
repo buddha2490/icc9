@@ -1,8 +1,8 @@
 \name{icc9}
 \alias{icc9}
-\title{R Version of teh ICC9 SAS Macro}
+\title{R Version of the ICC9 SAS Macro}
 \description{
-The icc9() function adapts the ICC9 macro published by Ellen Hertmark and Donna Spiegelman (2010).  It computes intraclass correlation coefficients (ICC) and coefficients of variation (CV) and their confidence intervals.  These metrics can be calculated with and without adjustment for fixed effects.
+The icc9() function adapts the ICC9 macro published by Ellen Hertzmark and Donna Spiegelman (2010).  It computes intraclass correlation coefficients (ICC) and coefficients of variation (CV) and their confidence intervals.  These metrics can be calculated with and without adjustment for fixed effects.
 }
 \usage{
 icc9(y,subject,fixed=NULL,dat,method="ML")
