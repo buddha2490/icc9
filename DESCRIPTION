@@ -8,8 +8,7 @@ Description: This R package contains the icc9() function which replicates the IC
 Imports:
 	dplyr,	
 	lme4
-Remotes: 
-	github::marklhc/bootmlm
+Remotes: marklhc/bootmlm
 License: None
 Encoding: UTF-8
 LazyData: true
