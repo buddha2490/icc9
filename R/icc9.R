@@ -1,9 +1,10 @@
 
 icc9 <- function(y,subject,fixed=NULL,dat,method="ML"){
 
-# # Quick install from github
-# p <-   rownames(installed.packages())
-# if ("bootmlm" %in% p == "FALSE") devtools::install_github("marklhc/bootmlm")
+# Quick install from github
+p <-   rownames(installed.packages())
+if ("devtools" %in% p == "FALSE") install.packages("devtools")
+if ("bootmlm" %in% p == "FALSE") devtools::install_github("marklhc/bootmlm")
 
 data <- dat
 
