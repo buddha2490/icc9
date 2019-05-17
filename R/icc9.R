@@ -1,15 +1,6 @@
 
 icc9 <- function(y,subject,fixed=NULL,dat,method="ML"){
 
-# p <-   rownames(installed.packages())
-# if ("merDeriv" %in% p == "FALSE") install.packages("merDeriv")
-# if ("bootmlm" %in% p == "FALSE") install.packages("bootmlm")
-# if ("lme4" %in% p == "FALSE") install.packages("lme4")
-#
-# require(merDeriv, quietly=TRUE, warn.conflicts=FALSE)
-# require(lme4, quietly=TRUE, warn.conflicts=FALSE)
-# require(bootmlm, quietly=TRUE, warn.conflicts=FALSE)
-
 data <- dat
 
 # quick function to format my estimates/confidence intervals
