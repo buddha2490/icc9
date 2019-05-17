@@ -1,14 +1,14 @@
 
 icc9 <- function(y,subject,fixed=NULL,dat,method="ML"){
 
-p <-   rownames(installed.packages())
-if ("merDeriv" %in% p == "FALSE") install.packages("merDeriv")
-if ("bootmlm" %in% p == "FALSE") install.packages("bootmlm")
-if ("lme4" %in% p == "FALSE") install.packages("lme4")
-
-require(merDeriv, quietly=TRUE, warn.conflicts=FALSE)
-require(lme4, quietly=TRUE, warn.conflicts=FALSE)
-require(bootmlm, quietly=TRUE, warn.conflicts=FALSE)
+# p <-   rownames(installed.packages())
+# if ("merDeriv" %in% p == "FALSE") install.packages("merDeriv")
+# if ("bootmlm" %in% p == "FALSE") install.packages("bootmlm")
+# if ("lme4" %in% p == "FALSE") install.packages("lme4")
+#
+# require(merDeriv, quietly=TRUE, warn.conflicts=FALSE)
+# require(lme4, quietly=TRUE, warn.conflicts=FALSE)
+# require(bootmlm, quietly=TRUE, warn.conflicts=FALSE)
 
 data <- dat
 
@@ -60,11 +60,11 @@ f <- formula(paste0("Y ~ ",paste(c("(1|SUBJECT)","FIXED"),collapse="+")))
     } else {
 f <- formula("Y ~ (1|SUBJECT)")
     }
-fit <- lmer(f, REML=modelmethod)  # model object
+fit <- lme4::lmer(f, REML=modelmethod)  # model object
 z <- summary(fit)       # summary object
 
 # Extract the asymptotic covariance matrix
-asycov <- data.frame(vcov_vc(fit,F))
+asycov <- data.frame(bootmlm::vcov_vc(fit,F))
 names(asycov) <- c("CovP1","CovP2")  # Renaming to match the SAS program
 row.names(asycov) <- c("Intercept","Residual")
 
